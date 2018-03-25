@@ -4,9 +4,8 @@
 from argparse import ArgumentParser
 
 parsers = ArgumentParser(
-    progress="pydata",
-    usage='%(progress)s [-l] [-o] project',
-    description="Location list and Organizer List on PyData"
+    usage = 'pydata [-l] [-o] project',
+    description = "Location list and Organizer List on PyData"
     )
 
 parsers.add_argument(
