@@ -2,7 +2,6 @@
 # coding: utf-8
 
 import sys
-import logging
 import traceback
 import pydata
 from command import parsers
@@ -22,8 +21,15 @@ def main():
         if args.l:
             pydata.PyData.scraping()
 
+        if args.o:
+            print('test')
+
     except Exception as e:
-        logging.error(traceback.format_exc())
+        t, v, tb = sys.exc_info()
+        error = traceback.format_exception(t, v, tb)
+        print(error[0])
+        print(error[1])
+        print(error[2])
 
 if __name__ == "__main__":
     main()
