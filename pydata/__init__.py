@@ -3,8 +3,8 @@
 
 import sys
 import traceback
-import pydata
-from command import parsers
+from pydata.list import PyData
+from pydata.command import parsers
 
 def main():
 
@@ -19,7 +19,7 @@ def main():
 
     try:
         if args.l:
-            pydata.PyData.scraping()
+            PyData.scraping()
 
         if args.o:
             print('test')

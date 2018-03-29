@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 
 class PyData:
 
+    @classmethod
     def scraping(self):
         target_url = 'https://www.meetup.com/ja-JP/pro/pydata/#meetups'
         r = requests.get(target_url)
@@ -14,7 +15,4 @@ class PyData:
 
         group = soup.find('div', class_='chunk')
         group_title = group.find_all('div', h3='text--sectionTitle')
-
-        for t in group_title:
-            title = t.a.title
-            print(title)
+        print(group_title)

@@ -20,11 +20,11 @@ setup(
     author_email='kaitokun07@icloud.com',
     license='MIT',
     keywords='pydata',
-    packages=["pydata"],
+    packages=find_packages(),
     entry_points={
         "console_scripts": [
-            "pydata=pydata.__init__:main"
-        ]
+            "pydata=pydata.__init__:main",
+        ],
     },
     classifiers=[
         'License :: OSI Approved :: MIT License',
