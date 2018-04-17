@@ -4,8 +4,8 @@
 from argparse import ArgumentParser
 
 parsers = ArgumentParser(
-    usage = 'pydata [-l] [-o] project',
-    description = "Location list and Organizer List on PyData"
+    usage = 'pydata [-l]',
+    description = "Location list PyData"
     )
 
 parsers.add_argument(
@@ -15,12 +15,12 @@ parsers.add_argument(
     help="You can see lists of all PyData location."
     )
 
-parsers.add_argument(
-    "-o",
-    action="store",
-    nargs=1,
-    help="You can see lists of PyData organizer."
-    )
+# parsers.add_argument(
+#     "-o",
+#     action="store",
+#     nargs=1,
+#     help="You can see lists of PyData organizer."
+#     )
 
 
 
