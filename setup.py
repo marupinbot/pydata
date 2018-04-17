@@ -19,8 +19,9 @@ setup(
     author='takezyou',
     author_email='kaitokun07@icloud.com',
     license='MIT',
+    install_requires=['beautifulsoup4'],
     keywords='pydata',
-    packages=find_packages(),
+    packages=find_packages(exclude=('tests')),
     entry_points={
         "console_scripts": [
             "pydata=pydata.__init__:main",
