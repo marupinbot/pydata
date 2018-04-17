@@ -30,3 +30,5 @@ class PyData:
                 # print("name:", name)
 
             count += 1
+
+        return True
