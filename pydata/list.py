@@ -3,6 +3,7 @@
 
 import requests
 from bs4 import BeautifulSoup
+from pprint import pprint
 
 
 class PyData:
@@ -16,14 +17,16 @@ class PyData:
         group = soup.find_all('div', class_='chunk', )
         group_title = group[12].find_all('a')
 
-        count = 0
+        count = 1
+        title = []
 
-        for title in group_title:
-            if count % 2 == 0:
-                title = title.string
-                print("title:", title)
-            else:
-                name = title.string
-                print("name:", name)
+        for t in group_title:
+            if count % 2 != 0:
+                title.append(t.string)
+                if count % 3 == 0:
+                    join_title = "  ".join(title)
+                    print(join_title)
+                    title = []
+                # print("name:", name)
 
             count += 1
