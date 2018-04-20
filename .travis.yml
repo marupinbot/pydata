@@ -7,9 +7,16 @@ matrix:
     - python: 3.6
       env: PYDATAENV=py36
 
-install: pip install pydata
+install:
+  - pip install pydata
+  - pip install coveralls
 
-script: pydata
+script:
+  - pydata
+  - coverage run --source=pydata setup.py test
 
 notifications:
   email: false
+
+after_success:
+  - coveralls
