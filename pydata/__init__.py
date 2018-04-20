@@ -3,8 +3,8 @@
 
 import sys
 import traceback
-from .list import PyData
-from .command import parsers
+from pydata.list import PyData
+from pydata.command import parsers
 
 
 def main():
