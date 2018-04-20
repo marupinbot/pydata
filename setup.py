@@ -19,7 +19,7 @@ setup(
     author='takezyou',
     author_email='kaitokun07@icloud.com',
     license='MIT',
-    install_requires=['beautifulsoup4'],
+    install_requires=['beautifulsoup4', 'lxml'],
     keywords='pydata',
     packages=find_packages(exclude=('tests')),
     entry_points={

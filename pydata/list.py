@@ -3,7 +3,6 @@
 
 import requests
 from bs4 import BeautifulSoup
-from pprint import pprint
 
 
 class PyData:
@@ -27,7 +26,7 @@ class PyData:
                     join_title = "  ".join(title)
                     print(join_title)
                     title = []
-                # print("name:", name)
+                    # print("name:", name)
 
             count += 1
 
