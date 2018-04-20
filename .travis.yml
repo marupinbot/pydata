@@ -1,0 +1,15 @@
+language: python
+
+matrix:
+  include:
+    - python: 3.5
+      env: PYDATAENV=py35
+    - python: 3.6
+      env: PYDATAENV=py36
+
+install: pip install pydata
+
+script: pydata
+
+notifications:
+  email: false
